@@ -1,8 +1,6 @@
 # easyPwdSprayer
 
-For testing purposes, I developed a little ps1 snippet to spray several passworts against domain user account. Intention is to understand these type of attack on my personal Active Directory lab.
-
-Maybe it helps you.
+For testing purposes, I developed a little ps1 snippet to spray several passwords against domain user accounts. Intention is to understand this type of attack in my personal Active Directory lab.
 
 ## Requirements
 
